@@ -6,6 +6,7 @@ import (
 	"github.com/Nuttachai-K/cafe-finder-api/internal/model"
 )
 
+// CafeResoisitory defines database operation for cafe
 type CafeRespository interface {
 	GetByID(id int) (*model.Cafe, error)
 	GetAll() ([]model.Cafe, error)
