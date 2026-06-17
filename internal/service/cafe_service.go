@@ -9,6 +9,12 @@ type CafeService struct {
 	repo repository.CafeRespository
 }
 
+func NewCafeService(repo repository.CafeRespository) *CafeService {
+	return &CafeService{
+		repo: repo,
+	}
+}
+
 func (s *CafeService) GetByID(id int) (*model.Cafe, error) {
 	// TODO
 	return s.repo.GetByID(id)
