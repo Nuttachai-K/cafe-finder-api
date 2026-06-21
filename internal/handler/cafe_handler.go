@@ -30,7 +30,7 @@ func (h *CafeHandler) GetByID(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	cafe, err := h.service.GetByID(id)
+	cafe, err := h.service.GetByID(r.Context(), id)
 	if err != nil {
 		http.Error(
 			w,
